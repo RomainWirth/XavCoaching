@@ -181,7 +181,7 @@ nav {
     /* background-color: var(--bckgdsmtphbutton); */
     /* color: var(--primary); */
     margin: 10%;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
     /* text-shadow: 0 5px 5px var(--black); */
@@ -414,7 +414,7 @@ nav {
     }
     #quote {
         /* margin: 0; */
-        font-size: 28px;
+        font-size: 2.5rem;
     }
     .offre-card {
         width: 60%;
@@ -518,6 +518,9 @@ nav {
         flex-direction: row;
         justify-content: flex-end;
         align-items: flex-end;
+    }
+    #quote {
+        text-align: left;
     }
     #first-button {
         align-self: flex-end;
