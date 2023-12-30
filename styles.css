@@ -28,7 +28,7 @@
     --primary: #FF914D;
     --secondary: #484848;
     --tertiary: #FE6216;
-    --black: #000;
+    --black: #111;
     --white: #FFF;
     --bckgdheader: rgba(72,72,72,0.5);
     --bckgdsmtphbutton: rgba(255, 255, 255, 0.5);
@@ -121,7 +121,7 @@ nav {
 #socials {
     background-color: var(--bckgdsmtphbutton);
     height: 50px;
-    width: 100px;
+    width: 147px;
     border-radius: 50px;
     position: fixed;
     bottom: 5px;
@@ -153,7 +153,7 @@ nav {
     justify-content: flex-end;
 }
 /*! --- SECTION 1 --- */
-#first-background {
+.first-background {
     background-image: url(./photos/xav-coaching-forest.jpg);
     height: 100vh;
     background-position: 25%;
@@ -210,9 +210,9 @@ nav {
     font-weight: bold;
 }
 /*! --- SECTION 2 --- */
-#second-background {
+.second-background {
     background-color: var(--bckgdsmtphbutton);
-    background-image: url(./photos/xav-coaching-sweatshirt.png);
+    /* background-image: url(./photos/xav-coaching-sweatshirt.png); */
     height: 100vh;
     background-position: 25%;
     background-repeat: no-repeat;
@@ -231,7 +231,6 @@ nav {
 .offre-card {
     width: 90%;
     height: 30%;
-    padding: 2%;
     border-radius: 15px;
     background-image: url(./photos/bkg_cards.png);
     box-shadow: 0px 0px 10px 0 var(--black);
@@ -242,15 +241,24 @@ nav {
 }
 .offre-card-content {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.offre-card-content-img {
+    display: none;
+}
+.offre-card-content-text {
+    height: 100%;
     padding: 2%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
-.offre-card-content h2 {
+.offre-card-content-text h2 {
     font-size: 1em;
-
+    text-align: center;
 }
 .underline {
     width: 100%;
@@ -406,14 +414,60 @@ nav {
 
 /* SECTION 6 */
 #avis {
-    background-color: var(--black);
+    background-color: var(--white);
 }
-
+#avis-content {
+    min-height: 90vh;
+    max-width: 1024px;
+    /* margin: 2rem auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#avis-content h2 {
+    color: #000;
+}
+.customer-review {
+    width: 90%;
+    background-color: var(--black);
+    background-image: url(./photos/bkg_cards.png);
+    margin: 2%;
+    padding: 2%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.customer-review-img {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.user img {
+    max-width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.customer-review p {
+    padding: 2%;
+    font-size: 0.9em;
+}
 /* SECTION 7 */
 #contact {
     background-color: var(--black);
 }
-
+#contact-content {
+    height: 90vh;
+}
+footer {
+    background-color: var(--black);
+}
 
 /* Format tablette */
 @media only screen and (min-width: 768px) {
@@ -428,7 +482,33 @@ nav {
         width: 60%;
     }
     .offre-card-content {
+        height: 100%;
+        display: flex;
         flex-direction: row;
+        align-items: center;
+    }
+    .offre-card-content-img {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+    #first-img {
+        border-radius: 15px 0 0 15px;
+    }
+    #second-img {
+        border-radius: 0 15px 15px 0;
+    }
+    #third-img {
+        border-radius: 15px 0 0 15px;
+    }
+    .offre-card-content-img img {
+        width: 100%;
+        min-height: 100%;
+    }
+    .offre-card-content-text {
+        width: 50%;
     }
     .private-coaching-details {
         padding: 2%;
@@ -555,15 +635,6 @@ nav {
     }
     #section-two-content {
         flex-direction: row;
-    }
-    #section-two-content-cards {
-        flex-direction: row;
-    }
-    .offre-card {
-        width: 30%;
-    }
-    .offre-card-content {
-        flex-direction: column;
     }
     .about-portrait {
         height: auto;
