@@ -8,18 +8,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
     <link rel="shortcut icon" href="./photos/Bouton_logo.png">
     <title>Xav Coaching</title>
 </head>
-<body class="snap-y snap-mandatory">
+<body>
     <header class="flex-row justify-center align-center">
         <div class="flex-row justify-between align-center header-content">
             <div id="nav-logo">
                 <a href="#accueil">
                     <div class="img-container flex-row justify-center align-center">
-                        <img id="logo-site" src="./photos/xav_coaching.png" alt="logo Xav Coaching coach sportif Chavanod Annecy">
+                        <img class="logo-site" src="./photos/xav_coaching.png" alt="logo Xav Coaching coach sportif Chavanod Annecy">
                     </div>
                 </a>
             </div>
@@ -47,7 +50,7 @@
                 </ul>
                 <!-- <a href="#">Connection</a> -->
                 <div class="icon">
-                    <span class="toggle"><img src="./photos/Bouton_logo.svg" alt=""></span>
+                    <span class="toggle"><img src="./photos/Bouton_logo.png" alt=""></span>
                 </div>
             </nav>
         </div>
@@ -69,12 +72,14 @@
             <div id="landing-content" class="width-fixed">
                 <div id="section-one-content" class="flex-column justify-start align-center">
                     <p id="quote" class="color-tertiary">Entrainez-vous pour vivre mieux plus longtemps !</p>
-                    <button class="main-button" id="first-button">Rejoignez-moi</button>
+                    <a href="#offres">
+                        <button class="main-button" id="first-button">Rejoignez-moi</button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-    <section id="offres" class="second-background snap-always snap-center">
+    <section id="offres" class="second-background">
         <div class="top"></div>
         <div class="width-fixed">
             <div id="section-two-content">
@@ -128,7 +133,7 @@
             </div>
         </div>
     </section>
-    <section id="third-background" class="snap-always snap-center">
+    <section id="third-background">
         <div class="top"></div>
         <div class="private-coaching-details">
             <div class="tarifs" id="coaching_details_content">
@@ -168,7 +173,7 @@
         </div>
         <!-- <div class="bottom"></div> -->
     </section>
-    <section class="snap-always snap-center" id="bio">
+    <section id="bio">
         <div class="top"></div>
         <div class="width-fixed about">
             <div class="about-portrait">
@@ -205,17 +210,18 @@
                     Et moi ? Je suis là pour vous coacher, pour que chaque jour compte,<br> 
                     pour vivre plus longtemps, plus fort, et en pleine forme.
                 </p>
-                <p class="bio-text margin-2-per">
+                <p class="bio-text margin-2-per text-emphazied">
                     Prêt à faire équipe pour atteindre vos sommets ?
                 </p>
             </div>
         </div>
     </section>
-    <section id="FAQ" class="snap-always snap-center">
+    <section id="FAQ">
         <div class="top"></div>
         <div class="FAQ-accordion">
             <div class="FAQ-accordion-item">
                 <h3 class="FAQ-accordion-item-header">
+                    <i class="fa fa-angle-right"></i>
                     1. Qu'est-ce que le coaching en longévité ?
                 </h3>
                 <div class="FAQ-accordion-item-body">
@@ -458,19 +464,44 @@
         </div>
     </section>
     <!-- formulaire contact -->
-    <section id="contact">
+    <!-- <section id="contact">
         <div class="top"></div>
         <div id="contact-content">
             <h2>Contactez-moi</h2>
+            <div>
+                
+            </div>
         </div>
-    </section>
+    </section> -->
     <!-- <section>
         <div class="top"></div>
     </section> -->
     <footer>
-
-
+        <div class="footer_content">
+            <div class="footer_content-contact">
+                <div class="img-container flex-row justify-center align-center">
+                    <img class="logo-site" src="./photos/xav_coaching.png" alt="logo Xav Coaching coach sportif Chavanod Annecy">
+                </div>
+                <div>
+                    <h2>Contactez-moi</h2>
+                    <form action="action.php" method="post" class="form-contact">
+                        <!-- <label>Votre nom :</label>
+                        <input name="lastname" id="lastname" type="text" />
+                        <label>Votre prénom :</label>
+                        <input name="firstname" id="firstname" type="text" /> -->
+                        <label>Votre email :</label>
+                        <input name="email" id="email" type="email" />
+                        <button class="main-button" type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer_contact-bottom">
+                <p>© 2024 - Xav' Coaching</p>
+                <p> - Tous droits réservés</p>
+            </div>
+        </div>
     </footer>
+    <script src="script.js"></script>
     <script src="toggleMenu.js"></script>
     <script src="toggleFAQ.js"></script>
 </body>

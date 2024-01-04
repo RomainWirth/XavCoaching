@@ -1,25 +1,21 @@
 const accordionItemHeaders = document.querySelectorAll(".FAQ-accordion-item-header");
-console.log("liste titres accordéons : ");
-console.log(accordionItemHeaders)
-
 accordionItemHeaders.forEach(accordionItemHeader => {
-  accordionItemHeader.addEventListener("click", event => {
+  accordionItemHeader.addEventListener("click", function() {
     
     // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
-    //*
     const currentlyActiveAccordionItemHeader = document.querySelector(".FAQ-accordion-item-header.active");
-    if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
-      currentlyActiveAccordionItemHeader.classList.toggle("active");
-      currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+    if (currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader !== this) {
+      currentlyActiveAccordionItemHeader.classList.remove("active");
+      currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = null;
     }
-    //*/
-    accordionItemHeader.classList.toggle("active");
-    const accordionItemBody = accordionItemHeader.nextElementSibling;
+
+    this.classList.toggle("active");
+    const accordionItemBody = this.nextElementSibling;
     // const accordionItemBody = document.querySelectorAll(".FAQ-accordion-item-body")
-    if(accordionItemHeader.classList.contains("active")) {
-      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+    if(accordionItemBody.style.maxHeight) {
+      accordionItemBody.style.maxHeight = null;
     } else {
-      accordionItemBody.style.maxHeight = 0;
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
     }
     
   });
